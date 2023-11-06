@@ -15,7 +15,7 @@ import javax.swing.AbstractListModel;
      
      // Creates the CustomListModel of the Sports display
      
-    private ArrayList<Sport> data = new ArrayList<Sport>();
+    private ArrayList<Match> data = new ArrayList<Match>();
 
     public CustomListModelMatches(){
         super();
@@ -28,15 +28,15 @@ import javax.swing.AbstractListModel;
 
     @Override
     public String getElementAt(int index) {
-        return data.get(index).getSportName();
+        return data.get(index).returnMatchInfo();
     }
     
-     public Sport getFullElementAt(int index) {
+     public Match getFullElementAt(int index) {
         return data.get(index); 
     }
 
      
-    public void addElement(Sport s){
+    public void addElement(Match s){
         data.add(s);
         int t = data.size()-1;
         fireContentsChanged(this, t, t);
