@@ -4,25 +4,21 @@
  */
 package com.mycompany.finalproject.classes;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  *
  * @author conradkadel
  */
-public class Sport {
+public class SportTournamentSearchResponse {
     
-    private String name;
+
+    private SportTournamentSingleResponse[] data;
     
-    private int id;
-  
-    
-    public Sport(String name, int id){
-        this.name = name;
-        this.id = id;
+    public SportTournamentSingleResponse[] getData(){
         
+        return data;
     }
     
-    public String getSportData(){
-        return name;
-    }
     
 }

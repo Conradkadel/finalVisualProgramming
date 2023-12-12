@@ -35,6 +35,10 @@ import javax.swing.AbstractListModel;
         return data.get(index);
     }
      
+     public ArrayList<Tournament> getData(){
+         return data;
+     }
+     
     public void addElement(Tournament s){
         data.add(s);
         int t = data.size()-1;

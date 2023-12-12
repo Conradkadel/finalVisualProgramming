@@ -4,25 +4,14 @@
  */
 package com.mycompany.finalproject.classes;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author conradkadel
  */
-public class Sport {
+public class PlayerInformationPanel extends JPanel{
     
-    private String name;
     
-    private int id;
-  
-    
-    public Sport(String name, int id){
-        this.name = name;
-        this.id = id;
-        
-    }
-    
-    public String getSportData(){
-        return name;
-    }
     
 }

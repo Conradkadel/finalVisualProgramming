@@ -28,7 +28,7 @@ import javax.swing.AbstractListModel;
 
     @Override
     public String getElementAt(int index) {
-        return data.get(index).getSportName();
+        return data.get(index).getSportData();
     }
     
      public Sport getFullElementAt(int index) {

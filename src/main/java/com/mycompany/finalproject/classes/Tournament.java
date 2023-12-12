@@ -20,20 +20,36 @@ public class Tournament {
     
     private int tournamentSize;
     
-    private ArrayList<Match> matches;
+   
+    private TeamResponse homeTeam;
+   
+    private TeamResponse awayTeam; 
+    
+    private String status;
+    
   
-    public Tournament(String name, int size, ArrayList<Match> matches){
+    public Tournament(String name, int size,TeamResponse homeTeam,TeamResponse awayTeam, String s){
         this.tournamentName = name;
         this.tournamentSize = size;
-        this.matches = matches;
+        
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        this.status = s;
+    
     }
 
-    public ArrayList<Match> getMatches() {
-        return matches;
-    }
 
     public String getTournamentName() {
         return tournamentName;
+    }
+    public String getInformation(){
+        return this.tournamentName + " is currently " + this.status + "/n";
+    }
+    public TeamResponse getHomeTeam(){
+        return homeTeam;
+    }
+    public TeamResponse getAwayTeam(){
+        return awayTeam;
     }
 
     public int getTournamentSize() {
