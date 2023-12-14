@@ -4,14 +4,15 @@
  */
 package com.mycompany.finalproject.classes;
 
-import javax.swing.JPanel;
-
 /**
  *
  * @author conradkadel
  */
-public class PlayerInformationPanel extends JPanel{
-    
-    
+public class TeamResponseSingle {
+     private SingleTeamResponse data;
+
+    public SingleTeamResponse getData() {
+        return data;
+    }
     
 }

@@ -12,9 +12,13 @@ import com.google.gson.annotations.SerializedName;
  */
 public class SinglePlayerSearchResponse {
     
+    
+    // Main response class for a player Search
+    
     private String name;
     private int sport_id;
     private String photo;
+    private String logo;
     private String position;
     private int age;
     private double height;
@@ -23,8 +27,18 @@ public class SinglePlayerSearchResponse {
     @SerializedName("market_value")
     private int value;
     
-     public int getSport_id() {
+    private Sport[] sport;
+    
+    public int getSport_id() {
         return sport_id;
+    }
+     
+    public String getLogo() {
+        return logo;
+    } 
+     
+    public Sport[] getSport() {
+        return sport;
     }
      
     public String getName() {
@@ -53,6 +67,16 @@ public class SinglePlayerSearchResponse {
 
     public int getValue() {
         return value;
+    }
+    
+    public String returnInformation(){
+        return "Name : " + this.getName() + "\n" +
+                "Age : " + this.getAge() + "\n" +
+                "Nationality : " + this.getNationality()+ "\n" +
+                "Height :" + this.getHeight() +
+                "Value : " + this.getValue()+ "\n" +
+                "Position : " + this.getPosition() ;
+                    
     }
     
 }

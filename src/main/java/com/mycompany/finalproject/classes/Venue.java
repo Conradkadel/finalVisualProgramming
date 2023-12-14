@@ -4,23 +4,18 @@
  */
 package com.mycompany.finalproject.classes;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  *
  * @author conradkadel
  */
-public class Sport {
+public class Venue {
     
-    private String name;
-    private int id;
- 
-    public Sport(String name,int id){
-        this.name =name;
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-   
+    public Stadium stadium;
+    
+    @SerializedName("stadium_capacity")
+    public int capacity;
+      
     
 }

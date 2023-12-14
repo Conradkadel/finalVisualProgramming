@@ -9,11 +9,9 @@ package com.mycompany.finalproject.classes;
  * @author conradkadel
  */
 public class TeamResponse {
-     
-    public int id;
-    public String name;
-    
-    public String logo;
-            
-    
+    private SingleTeamResponse[] data;
+
+    public SingleTeamResponse[] getData() {
+        return data;
+    }
 }

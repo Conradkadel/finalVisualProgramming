@@ -11,27 +11,68 @@ import com.google.gson.annotations.SerializedName;
  * @author conradkadel
  */
 public class SportTournamentSingleResponse {
-    @SerializedName("sport_id")
-    public int id;
     
-    public String name;
+    // Main Receiver class for a match 
     
-    public String logo;
-    
-    @SerializedName("start_date")
-    public String startDate;
-    
-    @SerializedName("end_date")
-    public String endDate;
+    private String name;
     
     @SerializedName("home_team")
-    public TeamResponse homeTeam;
-    
+    private SingleTeamResponse homeTeam;
+   
     @SerializedName("away_team")
-    public TeamResponse awayTeam; 
+    private SingleTeamResponse awayTeam;
     
-    @SerializedName("status_more")
-    public String status;
+    @SerializedName("home_score")
+    private Score homeScore;
+     
+    @SerializedName("away_score")
+    private Score awayScore;
+    
+    @SerializedName("time_details")
+    private Time time;
+    
+    private Season season;
+    
+    private String status;
+    
+    @SerializedName("main_odds")
+    private MatchOdds matchOdds;
+
+    public String getName() {
+        return name;
+    }
+
+    public SingleTeamResponse getHomeTeam() {
+        return homeTeam;
+    }
+
+    public SingleTeamResponse getAwayTeam() {
+        return awayTeam;
+    }
+
+    public Score getHomeScore() {
+        return homeScore;
+    }
+
+    public Score getAwayScore() {
+        return awayScore;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public Season getSeason() {
+        return season;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public MatchOdds getMatchOdds() {
+        return matchOdds;
+    }
     
      
          

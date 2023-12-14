@@ -8,19 +8,14 @@ package com.mycompany.finalproject.classes;
  *
  * @author conradkadel
  */
-public class Sport {
+public class AtpRankingResponse {
     
-    private String name;
-    private int id;
- 
-    public Sport(String name,int id){
-        this.name =name;
-        this.id = id;
-    }
+    
+    
+    private SingleAtpRankingResponse[] data;
 
-    public String getName() {
-        return name;
+    public SingleAtpRankingResponse[] getData() {
+        return data;
     }
-   
     
 }

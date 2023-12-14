@@ -28,19 +28,21 @@ import javax.swing.AbstractListModel;
 
     @Override
     public String getElementAt(int index) {
-        return data.get(index).returnMatchInfo();
+        return data.get(index).getName();
     }
     
      public Match getFullElementAt(int index) {
         return data.get(index); 
     }
-
      
     public void addElement(Match s){
         data.add(s);
         int t = data.size()-1;
         fireContentsChanged(this, t, t);
     }
+     public ArrayList<Match> getData(){
+         return data;
+     }
 
     public void removeElement(int index){
         if(data.size() > 0){

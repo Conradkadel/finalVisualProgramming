@@ -15,7 +15,7 @@ import javax.swing.AbstractListModel;
      
      // Creates the CustomListModel for a tournament 
      
-    private ArrayList<Tournament> data = new ArrayList<Tournament>();
+    private ArrayList<Match> data = new ArrayList<Match>();
 
     public CustomListModelTournament(){
         super();
@@ -28,18 +28,18 @@ import javax.swing.AbstractListModel;
 
     @Override
     public String getElementAt(int index) {
-        return data.get(index).getTournamentName();
+        return data.get(index).getName();
     }
     
-     public Tournament getFullElementAt(int index) {
+     public Match getFullElementAt(int index) {
         return data.get(index);
     }
      
-     public ArrayList<Tournament> getData(){
+     public ArrayList<Match> getData(){
          return data;
      }
      
-    public void addElement(Tournament s){
+    public void addElement(Match s){
         data.add(s);
         int t = data.size()-1;
         fireContentsChanged(this, t, t);
