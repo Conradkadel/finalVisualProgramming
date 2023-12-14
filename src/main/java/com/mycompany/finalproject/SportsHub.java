@@ -1272,6 +1272,7 @@ public class SportsHub extends javax.swing.JFrame {
         });
 
         jbtnFindTeam.setBackground(new java.awt.Color(153, 153, 153));
+        jbtnFindTeam.setFont(new java.awt.Font("Impact", 0, 13)); // NOI18N
         jbtnFindTeam.setText("Find Team");
         jbtnFindTeam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1354,6 +1355,7 @@ public class SportsHub extends javax.swing.JFrame {
         jpnlTeamName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jbtnAddFavTeam.setBackground(new java.awt.Color(102, 102, 102));
+        jbtnAddFavTeam.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
         jbtnAddFavTeam.setText("Add to Favourties");
         jbtnAddFavTeam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1699,7 +1701,6 @@ public class SportsHub extends javax.swing.JFrame {
 
         jpnlAtpTournaments.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jpnlAtpTournaments.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jpnlAtpTournaments.setText("Tournaments");
         jpnlAtpTournaments.setName(""); // NOI18N
 
         jpnlAtpNationality.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -1950,7 +1951,7 @@ public class SportsHub extends javax.swing.JFrame {
 
             for(SingleTeamResponse sr : teamSearchList){
                 if(sr.getCountry() != null){
-                    model.addRow(new Object[]{sr.getName(),sr.getCountry().toUpperCase()});
+                    model.addRow(new Object[]{sr.getName(),getSport(sr.getSports_id()),sr.getCountry().toUpperCase()});
                 }
             }
         }

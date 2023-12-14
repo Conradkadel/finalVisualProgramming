@@ -46,7 +46,8 @@ public class MatchDisplay extends javax.swing.JFrame {
         
         jlblSeason.setText(m.getSeason().name);
         jlblTitle.setText(m.getName());
-        if(m.getTime().played > 0){
+        
+        if(m.getTime() != null){
             StringBuilder time = new StringBuilder();
             String t = m.getTime().played + "";
             for(int i = 0; i< t.length(); i++) {
@@ -59,7 +60,6 @@ public class MatchDisplay extends javax.swing.JFrame {
                 time.append(a);
             jlblTime.setText(time.toString());
         }
-            jlblTime.setText("" + m.getTime().played);
         }else{
              jlblTime.setText("No Time Found");
         }
@@ -74,22 +74,22 @@ public class MatchDisplay extends javax.swing.JFrame {
         } else{
             jlblHomeName.setText("Nothing Found");
         }
-        if(m.getMatchOdds() != null || m.getMatchOdds().homeOdds.value > 0){
+        if(m.getMatchOdds() != null){
             jlblHomeOdds.setText("Odds :" + m.getMatchOdds().homeOdds.value);
         } else{
             jlblHomePoints.setText("Nothing Found");
         }
-        if(m.getAwayScore() != null || m.getAwayScore().points > -1){
+        if(m.getAwayScore() != null){
             jlblAwayPoints.setText("" + m.getAwayScore().points);
         } else{
             jlblAwayPoints.setText("Nothing Found");
         }
-        if(m.getAwayTeam() != null || m.getAwayTeam().getName().length()>0){
+        if(m.getAwayTeam() != null){
             jlblAwayName.setText(m.getAwayTeam().getName());
         } else{
             jlblAwayName.setText("Nothing Found");
         }
-        if(m.getMatchOdds()!= null || m.getMatchOdds().awayOdds.value > 0){
+        if(m.getMatchOdds()!= null){
             jlblAwayOdds.setText("Odds :" + m.getMatchOdds().awayOdds.value);
         }
         else{
